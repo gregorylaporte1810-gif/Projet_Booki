@@ -120,9 +120,37 @@ a {
 .populaires-cards .card-rating {
     margin-bottom: 5px;
 }
+/********HEADER*********/
+.main-nav {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+}
 
+.logo {
+    width: 61.09px;
+    height: 19px;
+}
 
+.nav-link {
+    display: flex;
+    text-decoration: none;
+    color: #000000;
+    font-size: 16px;
+    font-weight: 400;
+    border-top: 2px solid transparent;
+    padding-top: 14px;
+    padding-bottom: 14px;
+    gap: 30px;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
 
+.nav-link a:hover {
+    color: #0065fc;
+    border-top: 2px solid #0065fc;
+}
 
 /* Le code ci-dessous correspond à la version responsive uniquement */
 
