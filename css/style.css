@@ -120,6 +120,7 @@ a {
 .populaires-cards .card-rating {
     margin-bottom: 5px;
 }
+
 /********HEADER*********/
 
 header {
@@ -283,6 +284,85 @@ span.filters-title {font-weight: bold;}
 #subtitle {
     font-size: 16px;
     font-weight: 400;
+}
+
+/******* Hebergements *******/
+.card-hebergements {
+    background-color: #FFFFFF;
+    border-radius: 20px;
+    /* L'ombre de Figma : X=0, Y=3, Flou=15, Couleur noire à 10% */
+    box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.1);
+    padding: 5px; /* Crée la bordure blanche autour de l'image */
+    display: flex;
+    flex-direction: column;
+}
+
+.card-hebergements img {
+    width: 100%;
+    height: 115px; /* À ajuster légèrement selon le rendu voulu */
+    object-fit: cover; /* Empêche l'image de s'écraser ou de s'étirer */
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+.hebergements-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Crée 3 colonnes de taille identique (1 fraction) */
+    gap: 30px; /* L'espace entre les cartes, tu peux ajuster selon Figma */
+}
+
+.card-content {
+    padding: 10px 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Pousse les étoiles vers le bas */
+    flex: 1; /* Permet au contenu de prendre l'espace restant */
+}
+
+.card-title {
+    margin: 0; /* Retire les marges par défaut des h3 */
+    font-size: 16px;
+}
+
+.card-subtitle {
+    margin: 5px 0 10px 0;
+    font-size: 14px;
+}
+
+/* Espacement entre les étoiles (optionnel, selon tes icônes FontAwesome) */
+.card-rating i {
+    color: #0065FC; /* Le bleu de la charte graphique Booki */
+}
+.card-rating .neutral-star {
+    color: #F2F2F2; /* Le gris pour les étoiles vides */
+}
+
+/******* Card Activities ***********/
+section.activities {
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+}
+
+.carte {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.carte img {
+    width: 100%;
+    border-radius: 20px;
+    object-fit: cover;
+    height: 380px;
+    width: 297.5px;
+}
+
+.carte h3 {
+    font-weight: 700;
+    font-size: 16px;
+    margin-top: 20px;
 }
 
 /* Le code ci-dessous correspond à la version responsive uniquement */
