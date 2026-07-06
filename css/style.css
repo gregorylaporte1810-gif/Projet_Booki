@@ -365,6 +365,25 @@ section.activities {
     margin-top: 20px;
 }
 
+/******** FOOTER *********/
+footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 0;
+}
+
+ul {padding-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+li {
+    padding-bottom: 15px;
+}
+
 /* Le code ci-dessous correspond à la version responsive uniquement */
 
 /****** Media queries ***********/
