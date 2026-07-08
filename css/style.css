@@ -374,13 +374,13 @@ footer {
     padding-left: 0;
 }
 
-ul {padding-bottom: 15px;
+footer ul {padding-bottom: 15px;
     display: flex;
     flex-direction: column;
     flex: 1;
 }
 
-li {
+footer li {
     padding-bottom: 15px;
 }
 
