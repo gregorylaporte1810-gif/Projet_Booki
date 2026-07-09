@@ -16,15 +16,14 @@
 
 <body>
     <div class="main-container">
-        <header>
-            <nav class="main-nav">
+        <header class="header">
+            <div class="header-logo">
                 <img src="images/logo/Booki.png" alt="Logo Booki" class="logo">
-                <ul class="nav-link">
-                    <li><a href="#hebergements">Hébergements</a></li>
-                    <li><a href="#activites">Activités</a></li>
-                </ul>
+            </div>
+            <nav class="header-nav">
+                <a href="#hebergements">Hébergements</a>
+                <a href="#activites">Activités</a>
             </nav>
-
         </header>
         <main>
 
@@ -34,51 +33,47 @@
                     <h2 class="section-title">Trouvez votre hébergement pour des vacances de rêve</h2>
                     <p class="section-subtitle">En plein centre-ville ou en pleine nature</p>
 
-                    <div class="search-bar">
-                        <form action="/page-de-resultats" method="GET" class="search-container">
+
+                        <form class="search-bar">
                             <div class="icon-wrapper">
                                 <i class="fa-solid fa-location-dot"></i>
                             </div>
-                            <input type="text" value="Marseille, France" placeholder="Entrez la ville"
-                                class="search-input" name="location" required>
-                            <button class="search-btn">Rechercher</button>
+
+                            <input type="text" value="Marseille, France" class="search-input">
+
+                            <button type="submit" class="search-btn">Rechercher</button>
                         </form>
-                    </div>
 
 
 
 
-                    <div class="filters-bar">
-                        <span class="filters-title">Filtres</span>
 
-                        <button class="btn-filter">
-                            <i class="fa-solid fa-money-bill-wave"></i>
-                            Économique
-                        </button>
+                   <div class="filters-bar">
+    <span class="filters-title">Filtres</span>
 
-                        <button class="btn-filter">
-                            <i class="fa-solid fa-person"></i>
-                            Familial
-                        </button>
+    <button class="btn-filter">
+        <i class="fa-solid fa-money-bill-wave"></i>Économique
+    </button>
 
-                        <button class="btn-filter">
-                            <i class="fa-solid fa-heart"></i>
-                            Romantique
-                        </button>
+    <button class="btn-filter">
+        <i class="fa-solid fa-person"></i>Familial
+    </button>
 
-                        <button class="btn-filter">
-                            <i class="fa-solid fa-fire"></i>
-                            Nos pépites
-                        </button>
-                    </div>
+    <button class="btn-filter">
+        <i class="fa-solid fa-heart"></i>Romantique
+    </button>
 
-                    <div class="subtitle-filters">
-                        <div class="subtitle-filter">
-                            <i class="fa-solid fa-info"></i>
-                        </div>
-                        <p id="subtitle">Plus de 500 logements sont disponibles dans cette ville</p>
-                    </div>
-                </div>
+    <button class="btn-filter">
+        <i class="fa-solid fa-fire"></i>Nos pépites
+    </button>
+</div>
+
+<div class="subtitle-filters">
+    <div class="subtitle-filter">
+        <i class="fa-solid fa-info"></i>
+    </div>
+    <p id="subtitle">Plus de 500 logements sont disponibles dans cette ville</p>
+</div>
             </section>
 
             <div class="hebergements-and-populaires">
@@ -293,33 +288,36 @@
 
             <h2 class="section-title" id="activites">Activités à Marseille</h2>
             <section class="activities">
-                            <a href="#">
-                            <div class="carte">
-                                <img src="images/activites/reno-laithienne.jpg" alt="image montrant le vieux port de Marseille avec des bateaux et des immeubles">
-                                <h3>Vieux-Port</h3>
-                            </div>
-                            </a>
-                            <a href="#">
+                <a href="#">
+                    <div class="carte">
+                        <img src="images/activites/reno-laithienne.jpg"
+                            alt="image montrant le vieux port de Marseille avec des bateaux et des immeubles">
+                        <h3>Vieux-Port</h3>
+                    </div>
+                </a>
+                <a href="#">
 
-                            <div class="carte">
-                                <img src="images/activites/paul-hermann.jpg" alt="image montrant le fort de pomégues">
-                                <h3>Fort de Pomégues</h3>
-                            </div>
-                            </a>
-                            <a href="#">
-                            <div class="carte">
-                                <img src="images/activites/kilyan-sockalingum.jpg" alt="image montrant le parc national des calanques avec la mer et les falaises">
-                                <h3>Parc National des Calanques</h3>
-                            </div>
-                            </a>
-                            <a href="#">
+                    <div class="carte">
+                        <img src="images/activites/paul-hermann.jpg" alt="image montrant le fort de pomégues">
+                        <h3>Fort de Pomégues</h3>
+                    </div>
+                </a>
+                <a href="#">
+                    <div class="carte">
+                        <img src="images/activites/kilyan-sockalingum.jpg"
+                            alt="image montrant le parc national des calanques avec la mer et les falaises">
+                        <h3>Parc National des Calanques</h3>
+                    </div>
+                </a>
+                <a href="#">
 
-                            <div class="carte">
-                                <img src="images/activites/florian-wehde.jpg" alt="image montrant notre dame de la garde avec la ville de Marseille en arrière plan">
-                                <h3>Notre-Dame-de-la-Garde</h3>
-                            </div>
-                            </a>
-                        </section>
+                    <div class="carte">
+                        <img src="images/activites/florian-wehde.jpg"
+                            alt="image montrant notre dame de la garde avec la ville de Marseille en arrière plan">
+                        <h3>Notre-Dame-de-la-Garde</h3>
+                    </div>
+                </a>
+            </section>
         </main>
         <footer>
             <ul>
