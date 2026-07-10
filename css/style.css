@@ -92,7 +92,6 @@ a {
 
 .populaires-cards .card {
     display: flex;
-    margin-top: 33px;
 }
 
 .populaires-cards img {
@@ -188,9 +187,8 @@ h2 {
 }
 
 .section-title {
-        margin-top: 30px;
-    margin-bottom: 8px;
-    height: 26px;
+    margin-top: 65px;
+    padding-bottom: 30px;
 }
 
 p {
@@ -400,9 +398,9 @@ span.filters-title {font-weight: bold;}
 
 /******* Card Activities ***********/
 section.activities {
-    display: flex;
-    gap: 20px;
-    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
 }
 
 .carte {
@@ -410,11 +408,14 @@ section.activities {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    border: 1px solid transparent;
+    border-radius: 25px;
+    overflow: hidden;
 }
 
 .carte img {
     width: 100%;
-    border-radius: 20px;
+    border-radius: 20px 20px 0 0;
     object-fit: cover;
     height: 380px;
     width: 297.5px;
@@ -433,6 +434,7 @@ footer {
     justify-content: space-between;
     align-items: center;
     padding-left: 0;
+    margin-top: 35px;
 }
 
 footer ul {padding-bottom: 15px;
@@ -443,6 +445,7 @@ footer ul {padding-bottom: 15px;
 
 footer li {
     padding-bottom: 15px;
+    list-style: none;
 }
 
 /* Le code ci-dessous correspond à la version responsive uniquement */
