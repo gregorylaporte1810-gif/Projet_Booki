@@ -17,6 +17,7 @@ body {
     display: flex;
     justify-content: center;
     margin: 0;
+    min-width: 320px;
 }
 
 .main-container {
@@ -32,6 +33,10 @@ a {
     font-size: 16px;
     font-weight: 400;
 }
+
+/* section {
+    margin: 35px 50px;
+} */
 
 .section-title {
     font-size: 22px;
@@ -74,6 +79,11 @@ a {
     box-sizing: border-box;
 }
 
+.hebergements-and-populaires .section-title {
+    margin-top: 0;
+    padding-bottom: 20px;
+}
+
 /****** Hebergements ***********/
 .hebergements {
     width: 65%;
@@ -82,6 +92,8 @@ a {
 /****** Populaires ***********/
 .populaires {
     width: 32%;
+    display: flex;
+    flex-direction: column;
 }
 
 .populaires-title {
@@ -91,7 +103,15 @@ a {
 }
 
 .populaires-cards .card {
+display: flex;
+
+}
+
+ .populaires-cards {
     display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex: 1;
 }
 
 .populaires-cards img {
@@ -122,6 +142,13 @@ a {
 .populaires-cards .card-rating {
     margin-bottom: 5px;
 }
+
+.hebergements-and-populaires .section-title {
+    margin-top: 0;
+    padding-bottom: 20px;
+    padding-top: 35px;
+} 
+
 
 /********HEADER*********/
 
@@ -320,7 +347,7 @@ span.filters-title {font-weight: bold;}
     display: flex;
     align-items: center;
     gap: 12px;
-    margin-bottom: 37.5px;
+    /* margin-bottom: 37.5px; */
 }
 
 .subtitle-filter {
@@ -349,37 +376,36 @@ span.filters-title {font-weight: bold;}
 .card-hebergements {
     background-color: #FFFFFF;
     border-radius: 20px;
-    /* L'ombre de Figma : X=0, Y=3, Flou=15, Couleur noire à 10% */
     box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.1);
-    padding: 5px; /* Crée la bordure blanche autour de l'image */
+    padding: 5px;
     display: flex;
     flex-direction: column;
 }
 
 .card-hebergements img {
     width: 100%;
-    height: 115px; /* À ajuster légèrement selon le rendu voulu */
-    object-fit: cover; /* Empêche l'image de s'écraser ou de s'étirer */
+    height: 115px;
+    object-fit: cover;
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
 }
 
 .hebergements-cards {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* Crée 3 colonnes de taille identique (1 fraction) */
-    gap: 30px; /* L'espace entre les cartes, tu peux ajuster selon Figma */
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
 }
 
 .card-content {
     padding: 10px 15px;
     display: flex;
     flex-direction: column;
-    justify-content: space-between; /* Pousse les étoiles vers le bas */
-    flex: 1; /* Permet au contenu de prendre l'espace restant */
+    justify-content: space-between;
+    flex: 1;
 }
 
 .card-title {
-    margin: 0; /* Retire les marges par défaut des h3 */
+    margin: 0;
     font-size: 16px;
 }
 
@@ -388,15 +414,30 @@ span.filters-title {font-weight: bold;}
     font-size: 14px;
 }
 
-/* Espacement entre les étoiles (optionnel, selon tes icônes FontAwesome) */
+
 .card-rating i {
-    color: #0065FC; /* Le bleu de la charte graphique Booki */
+    color: #0065FC;
 }
 .card-rating .neutral-star {
-    color: #F2F2F2; /* Le gris pour les étoiles vides */
+    color: #F2F2F2;
+}
+
+.afficher-plus {
+    display: inline-block;
+    margin-top: 30px;
+    margin-left: 0;
+}
+.afficher-plus h3 {
+    margin: 0;
+    font-size: 18px;
 }
 
 /******* Card Activities ***********/
+
+#activites {
+    margin-top: 50px;
+}
+
 section.activities {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -404,29 +445,25 @@ section.activities {
 }
 
 .carte {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    border: 1px solid transparent;
-    border-radius: 25px;
+    background-color: #FFFFFF; /* Fond blanc */
+    border-radius: 20px;
+    box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.1);
     overflow: hidden;
+    height: 100%;
 }
 
 .carte img {
     width: 100%;
-    border-radius: 20px 20px 0 0;
-    object-fit: cover;
     height: 380px;
-    width: 297.5px;
+    object-fit: cover;
 }
 
 .carte h3 {
     font-weight: 700;
     font-size: 16px;
-    margin-top: 20px;
+    margin: 0;
+    padding: 20px 19px;
 }
-
 /******** FOOTER *********/
 footer {
     display: flex;
@@ -487,5 +524,109 @@ footer li {
 
 /* Small devices (phones, less than 768px) */
 @media (max-width: 767.98px) {
-    /* ... */
+    /* 1. Conteneur principal */
+    .main-container {
+        padding: 0; 
+    }
+
+    /* 2. Header */
+    .header {
+        flex-direction: column;
+        align-items: center;
+    }
+    .header-nav {
+        width: 100%;
+        gap: 0;
+    }
+    .header-nav a {
+        width: 50%;
+        text-align: center;
+        padding-bottom: 15px;
+        border-top: none;
+        border-bottom: 2px solid var(--main-bg-color);
+    }
+    .header-nav a:hover {
+        border-top: none;
+        border-bottom: 2px solid var(--main-color);
+    }
+
+    .subtitle-filter {
+        margin-bottom: 35px;
+    }
+
+    /* 3. Section Recherche & Filtres */
+    .search-content {
+        padding: 0 20px;
+    }
+    .search-bar {
+        width: 100%;
+    }
+    .filters-bar {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+        width: 100%;
+        align-items: center;
+    }
+
+    .filters-title {
+        grid-column: 1 / -1;
+        margin-bottom: 5px;
+    }
+
+    .btn-filter {
+        width: 100%;
+        justify-content: center;
+        padding: 10px 15px;
+        font-size: 14px;
+    }
+
+    /* 4. Inversion Hébergements / Populaires */
+    .hebergements-and-populaires {
+        flex-direction: column-reverse;
+        gap: 0;
+    }
+    .hebergements-and-populaires section {
+        border-radius: 0;
+    }
+    
+    /* 5. Inversion des couleurs de fond */
+    .hebergements {
+        background-color: #FFFFFF;
+        padding: 30px 20px;
+    }
+    .populaires {
+        background-color: var(--main-bg-color);
+        padding: 30px 20px;
+    }
+    
+    /* 6. Grilles (Passage à 1 seule colonne) */
+    .hebergements-cards {
+        grid-template-columns: 1fr;
+    }
+    
+    .populaires-cards {
+        flex-direction: column;
+    }
+    .populaires-cards a {
+        width: 100%;
+    }
+    
+    section.activities {
+        grid-template-columns: 1fr;
+        padding: 0 20px;
+    }
+    #activites {
+        padding-left: 20px;
+    }
+
+    /* 7. Footer */
+    footer {
+        flex-direction: column;
+        margin-left: 0;
+        margin-right: 0;
+        padding: 30px 20px;
+        gap: 30px;
+        align-items: flex-start;
+    }
 }
