@@ -598,15 +598,18 @@ footer li {
     .populaires {
         background-color: var(--main-bg-color);
         padding: 30px 20px;
+     
     }
     
     /* 6. Grilles (Passage à 1 seule colonne) */
     .hebergements-cards {
         grid-template-columns: 1fr;
+        
     }
     
     .populaires-cards {
         flex-direction: column;
+           gap: 20px;
     }
     .populaires-cards a {
         width: 100%;
@@ -626,7 +629,11 @@ footer li {
         margin-left: 0;
         margin-right: 0;
         padding: 30px 20px;
-        gap: 30px;
+        gap: 10px;
         align-items: flex-start;
+    }
+
+    footer ul {
+        margin: 0;
     }
 }
